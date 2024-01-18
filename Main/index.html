@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/04b98f3108.js" crossorigin="anonymous"></script>
+        <title>Student Aid</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo" class="nav-link">Student Aid</a>    
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <button class="navbar-toggler" onclick="Toggle_Menu()" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navbarNav">
+                        <div class="navbar-nav ms-auto" id="ulnav">
+                            <a href="https://wa.me/+96176516691" data-rr-ui-event-key="https://wa.me/+96176516691" target="_blank" class="nav-link">Contact</a>
+                            <a role="button" class="nav-link" tabindex="0" href="#" onclick="Scroll_Down()">About Us</a>
+                            <a role="button" class="nav-link" onclick="Scroll()">Services</a>
+                            <a href="../Login Page/index.html" class="nav-link">Log Out</a>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="box2">
+            <div class="Info2">
+                <h2>Our Goal:</h2>
+                <p>We aim to help university students find the softwares they need for their courses.<br>
+                You can improve this Student Aid by giving us your feedback and sending any document or uni/major name or any software not found.</p>
+                <p><button onclick="Scroll_Down()">Contact Us</button></p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="box1">
+            <div class="Info1">
+                <h2>Our Services: </h2>
+                <p>You can get almost any software you need in your domain of study for free or cracked if it's paid.</p>
+                <table border="0">
+                    <form action="#">
+                        <div class="uni">
+                            <tr>
+                                <td><label for="University">Enter Your University: </label></td>
+                                <td>
+                                    <select name="University" id="Uni-se" class="Uni" value="University" onclick="Major_Programs()" onchange="Major_Programs()">
+                                        <option name="Uni" id="Uni-op">University</option>
+                                        <option name="LU" id="Uni-LU">Lebanese University</option>
+                                        <option name="LIU" id="Uni-LIU">Lebanese International University</option>
+                                        <option name="IUL" id="Uni-IUL">Islamic University of Lebanon</option>
+                                        <option name="AUST" id="Uni-AUST">American University of Science and Technology</option>
+                                        <option name="UA" id="Uni-UA">Antonine University</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </div>
+                        <div class="major">
+                            <tr>
+                                <td><label for="Major">Enter your major: </label></td>
+                                <td>
+                                    <select name="Major" id="Major" class="major" onclick="Major_Programs()" onchange="Major_Programs()" value="">
+                                        <option name="Majors">Major</option>
+                                        <option name="Computer Science">Computer Science</option>
+                                        <option name="Biochemistry">Biochemistry</option>
+                                        <option name="Electronic">Electronic</option>
+                                        <option name="Mechanincs">Mechanincs</option>
+                                        <option name="Electricity">Electricity</option>
+                                    </select>
+                                </td>
+                            </tr>                        
+                            <tr><td><div class="links" id="links"></div></td></tr>
+                        </div>
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td><label for="link">If you didn't find your software link add it here: </label></td>
+                        </tr>
+                        <tr>
+                            <td><label for="software">Add the needed software name: </label></td>
+                            <td><input type="text" id="new-soft-name" onchange="Add_Link()" value="" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="software">Add the software downloading link: </label></td>
+                            <td><input type="url" id="new-url" onchange="Add_Link()" value="" required></td>
+                        </tr>
+                        <div class="adding">
+                            <tr>
+                                <td><label for="Adding">If you didn't find any of your university or your major<br>add them here and re-enter them in the previous boxes: </label></td>
+                            </tr>
+                            <tr>
+                                <td><label for="Adding University">Add Your University: </label></td>
+                                <td><input type="text" id="new-university" onchange="Add_University()" value="" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="Adding mini-name">Add the University Mini Name (LIU,IUL): </label></td>
+                                <td><input type="text" id="new-mini" onchange="Add_University()" value="" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="Adding Major">Add Your Major: </label></td>
+                                <td><input type="text" id="new-major" onchange="Add_Major()" value="" required></td>
+                            </tr>
+                        </div>
+                    </form>
+                    <tr><td><br></td></tr>
+
+                    <div class="office" id="office">
+                        <tr>
+                            <td><label for="office">Download Microsoft Office (cracked) from here: </label></td>
+                            <td>
+                                <select name="Microsoft-Office" id="Microsoft-Office" onchange="Mic_Off()" value="">
+                                    <option name="offices">Microsoft Office</option>
+                                    <option name="office 2010">Microsoft Office 2010</option>
+                                    <option name="office 2013">Microsoft Office 2013</option>
+                                    <option name="office 2016">Microsoft Office 2016</option>
+                                    <option name="office 2019">Microsoft Office 2019</option>
+                                    <option name="office 2021">Microsoft Office 2021</option>
+                                    <option name="office 365">Microsoft Office 365</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Adobe-Acrobat">Download Adobe Acrobat Reader (pdf editor) from here: &nbsp; </label></td>
+                            <td class="a"><a href="https://get.adobe.com/reader/" target="_blank">Adobe Acrobat Reader</a></td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </div>
+
+        <br>
+
+        <footer id="Footer">
+            <div class="main-content">
+                <div class="left box">
+                    <h2>About us</h2>
+                    <div class="content">
+                        <p>As the name of the website shows, we aim to give aid to students do better in their courses, and the very first thing is software.
+                           We will add course sections soon including all documents of these courses.  
+                        </p>
+                        <div class="social">
+                            <a href="https://www.facebook.com/profile.php?id=100012566013064" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2F_ahmad_hellani_%3Figshid%3DYTQwZjQ0NmI0OA%253D%253D%26fbclid%3DIwAR1J1j4wMXJRtgt8svt3W0rQRN3PFiazDoIP6AnHHpBSZImJY51z38u3--U&h=AT1wnJtsSqiAUH8D6gNohgPnrI95Hyv-J1_D5B11JgEikppMwy4De6_vVCufhmbpHVXja8DHUXQ9d8VXq-yLXvED6evlT5_2DhlA0luRRFDjjdLhLX25cYMAl0ucgduOZFaKdg" target="_blank"><span class="fab fa-instagram"></span></a>
+                            <a href="https://www.linkedin.com/in/ahmad-hellani/" target="_blank"><span class="fab fa-linkedin" ></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="center box">
+                    <h2>Address</h2>
+                    <div class="content">
+                        <div class="place">
+                            <a href="https://www.google.com/maps/place/Beirut/@33.8547266,35.52368,13z/data=!4m6!3m5!1s0x151f17215880a78f:0x729182bae99836b4!8m2!3d33.8937913!4d35.5017767!16zL20vMDlianY?entry=ttu" target="_blank"><span class="fas fa-map-marker-alt"></span></a>
+                            <span class="text">Beirut, Lebanon</span>
+                        </div>
+                        <div class="phone">
+                            <a href="https://wa.me/+96176516691" target="_blank"><span class="fas fa-phone-alt"></span></a>
+                            <span class="text">+961 76 516 691</span>
+                        </div>
+                        <div class="email">
+                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqVxDbgMnTPsLZgqHdbmvZBRsjrJKFKvkTzTVjtJVbnzPpzgJftSFNjmnHDpdzZfNsSZHL" target="_blank"><span class="fas fa-envelope"></span></a>
+                            <span class="text">ahmedhellani7@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right box">
+                    <h2>Contact us</h2>
+                    <div class="content">
+                        <form action="#">
+                            <div class="email">
+                                <div class="text">Email *</div>
+                                <input type="email" required>
+                            </div>
+                            <div class="msg">
+                                <div class="text">Message *</div>
+                                <textarea rows="2" cols="25"></textarea>
+                            </div>
+                            <div class="btn">
+                                <button type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="buttom">
+                <center>
+                    <span class="credit">Created By <a href="#" id="CV" onclick="Download()">Ahmad Hellani</a> | </span>
+                    <span class="far fa-copyright"></span><span> 2023 All rights reserved</span>
+                </center>
+            </div>
+        </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
